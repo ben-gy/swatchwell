@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Pick colours from your camera or any image, build a palette, and export it as CSS, JSON, PNG, SVG, ASE or GPL. Runs entirely in your browser — nothing is uploaded." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+    <meta property="og:title" content="Swatchwell" />
+    <meta property="og:description" content="Pick colours from your camera or any image, build a palette, and export it. Nothing leaves your device." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://swatchwell.benrichardson.dev/" />
+    <meta property="og:image" content="https://swatchwell.benrichardson.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Swatchwell" />
+    <meta name="twitter:description" content="Pick colours from your camera or any image, build a palette, and export it. Nothing leaves your device." />
+    <meta name="twitter:image" content="https://swatchwell.benrichardson.dev/og.png" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com https://feedback.benrichardson.dev; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self' data:; connect-src 'self' blob: data: https://cloudflareinsights.com https://feedback.benrichardson.dev; worker-src 'self' blob:; child-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none';"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Swatchwell — pick colours from your camera or any image</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Swatchwell",
+        "description": "Pick colours from your camera or any image, build a palette, and export it as CSS, JSON, PNG, SVG, ASE or GPL. Runs entirely in your browser — nothing is uploaded.",
+        "url": "https://swatchwell.benrichardson.dev/",
+        "image": "https://swatchwell.benrichardson.dev/og.png",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web browser",
+        "browserRequirements": "Requires JavaScript",
+        "author": { "@type": "Person", "name": "Ben Richardson", "url": "https://benrichardson.dev" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ba2bab2193ba42c1bea3d6714fcd0e28"}'></script>
+    <script defer src="https://feedback.benrichardson.dev/w.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

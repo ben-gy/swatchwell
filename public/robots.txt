@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swatchwell.benrichardson.dev/sitemap.xml
