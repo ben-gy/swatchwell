@@ -151,6 +151,9 @@ body {
 .dropzone:hover .dropzone-empty, .dropzone.drag .dropzone-empty { border-color: var(--accent); color: var(--text-secondary); background: color-mix(in srgb, var(--accent) 5%, transparent); }
 .dz-title { font-weight: 560; color: var(--text-primary); margin: 4px 0 0; }
 .dz-sub { font-size: 13px; margin: 0; max-width: 40ch; }
+.sample-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 6px 13px; border: 1px solid var(--border-default); border-radius: 999px; background: var(--bg-surface); color: var(--accent); font: inherit; font-size: 13px; font-weight: 560; cursor: pointer; transition: var(--transition); }
+.sample-link:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.sample-link .ic { color: var(--accent); }
 .image-stage { display: block; line-height: 0; }
 .image-stage canvas { width: 100%; height: auto; max-height: 460px; object-fit: contain; cursor: crosshair; display: block; }
 .extract-row { display: flex; align-items: center; gap: 16px; padding: 14px; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; }

@@ -32,6 +32,7 @@ export interface Refs {
   imagePanel: HTMLElement;
   dropzone: HTMLElement;
   fileInput: HTMLInputElement;
+  sampleBtn: HTMLButtonElement;
   imageCanvas: HTMLCanvasElement;
   imageStage: HTMLElement;
   extractRow: HTMLElement;
@@ -111,6 +112,7 @@ const SHELL = `
               ${icon('image', 30)}
               <p class="dz-title">Drop an image, tap to pick, or paste</p>
               <p class="dz-sub">A palette is extracted automatically. Click the image to eyedrop an exact spot.</p>
+              <button type="button" class="sample-link" id="sample-btn">${icon('image', 14)} Try a sample image</button>
             </div>
             <input type="file" id="file-input" accept="image/*" hidden />
           </div>
@@ -173,6 +175,7 @@ export function buildShell(root: HTMLElement): Refs {
     imagePanel: $('#image-panel'),
     dropzone: $('#dropzone'),
     fileInput: $('#file-input'),
+    sampleBtn: $('#sample-btn'),
     imageCanvas: $('#image-canvas'),
     imageStage: $('#image-stage'),
     extractRow: $('#extract-row'),

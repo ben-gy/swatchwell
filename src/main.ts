@@ -231,6 +231,26 @@ async function runExtract(): Promise<void> {
   emit('image', 'ok', `Palette of ${colors.length} colours ready`);
 }
 
+async function loadSample(): Promise<void> {
+  try {
+    emit('image', 'info', 'Loading sample image');
+    const res = await fetch('samples/demo.jpg');
+    if (!res.ok) throw new Error(`sample fetch ${res.status}`);
+    const blob = await res.blob();
+    // Route through the exact same path as a dropped/picked image.
+    await loadImageFile(new File([blob], 'sample.jpg', { type: blob.type || 'image/jpeg' }));
+  } catch (err) {
+    emit('image', 'err', `Sample failed: ${err instanceof Error ? err.message : String(err)}`);
+    toast('Could not load the sample', 'err');
+  }
+}
+
+refs.sampleBtn.addEventListener('click', (e) => {
+  // The pill sits inside the dropzone, whose click opens the file picker — don't do both.
+  e.stopPropagation();
+  void loadSample();
+});
+
 refs.dropzone.addEventListener('click', (e) => {
   if ((e.target as HTMLElement).closest('#image-stage')) return; // clicks on the image = eyedrop
   refs.fileInput.click();
